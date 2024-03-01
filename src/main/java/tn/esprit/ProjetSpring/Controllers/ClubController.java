@@ -38,7 +38,7 @@ public class ClubController {
     Club updateClub(@RequestBody Club club,@PathVariable String nomUni){
         return  this.clubService.updateClub(club, nomUni);
     }
-
+	//-----------------
     @CrossOrigin(origins = "*", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
     @PostMapping("/dashboard/clubs/uploadImage/{id}")
     public Club handleImageFileUpload(@RequestParam("fileImage") MultipartFile fileImage, @PathVariable long id) {
